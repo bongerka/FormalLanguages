@@ -61,10 +61,7 @@ class RegularExpressionHandling:
 
     @staticmethod
     def __sum(lhs, rhs) -> list:
-        length = len(lhs)
-        res = [True] * length
-        for i in range(length):
-            res[i] = lhs[i] | rhs[i]
+        res = [lhs[i] | rhs[i] for i in range(len(lhs))]
         return res
 
     @staticmethod

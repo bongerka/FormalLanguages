@@ -64,10 +64,7 @@ class RegularExpressionHandling:
         length = len(lhs)
         res = [True] * length
         for i in range(length):
-            if lhs[i] | rhs[i]:
-                res[i] = True
-            else:
-                res[i] = False
+            res[i] = lhs[i] | rhs[i]
         return res
 
     @staticmethod
